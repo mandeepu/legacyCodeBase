@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html ng-app="countryApp">
+<head>
+    <title>Example Angluar js </title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js" "></script>
+    <script>
+        var countryApp = angular.module('countryApp', []);
+        countryApp.controller('CountryCtrl', ['$scope', function ($scope) {
+
+            $scope.countries = [
+                {
+                    "name": "China",
+                    "population": 1359821000,
+                    "flagURL": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+                    "capital": "Beijing",
+                    "gdp": 12261
+                },
+                {
+                    "name": "India",
+                    "population": 1205625000,
+                    "flagURL": "http://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+                    "capital": "New Delhi",
+                    "gdp": 4716
+                },
+                {
+                    "name": "United States of America",
+                    "population": 312247000,
+                    "flagURL": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                    "capital": "Washington, D.C.",
+                    "gdp": 16244
+                }
+            ];
+
+            $scope.sortfield = 'population';
+            $scope.reverse = true;
+
+            //$http.get('countries.json').success(function(data) {
+            //    $scope.countries = data;
+            //});
+        }]);
+    </script>
+</head>
+<body>
+    <div ng-controller="CountryCtrl">
+        Search <input type="text" ng-model="query"/>
+       
+        <table>
+            <tr>
+                <th><a href="" ng-click="sortfield = 'name'; reverse = !reverse">Country</a></th>
+                <th><a href="" ng-click="sortfield = 'population'; reverse = !reverse"> Population</a></th>
+                <th>flag</th>
+                <th>capital</th>
+                <th>GDP</th>
+            </tr>
+            <tr ng-repeat="country in countries | filter:query | orderBy:sortfield:reverse">
+                <td>{{country.name}}</td>
+                <td>{{country.population | number}}</td>
+                <td><img ng-src="{{country.flagURL}}" width="100" /></td>
+                <td>{{country.capital}}</td>
+                <td>{{country.gdp | currency}}</td>
+            </tr>
+        </table>
+        <!--<ul>
+                <li ng-repeat="country in countries">
+                    {{country.name}} {{country.population}}
+                </li>
+            </ul>-->
+    </div>
+
+</body>
+</html>

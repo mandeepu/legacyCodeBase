@@ -1,0 +1,5 @@
+c:\users\mandeepu\documents\visual studio 2013\Projects\DemoAngular\DemoAngular\bin\Debug\DemoAngular.dll
+c:\users\mandeepu\documents\visual studio 2013\Projects\DemoAngular\DemoAngular\bin\Debug\DemoAngular.pdb
+c:\users\mandeepu\documents\visual studio 2013\Projects\DemoAngular\DemoAngular\obj\Debug\DemoAngular.csprojResolveAssemblyReference.cache
+c:\users\mandeepu\documents\visual studio 2013\Projects\DemoAngular\DemoAngular\obj\Debug\DemoAngular.dll
+c:\users\mandeepu\documents\visual studio 2013\Projects\DemoAngular\DemoAngular\obj\Debug\DemoAngular.pdb

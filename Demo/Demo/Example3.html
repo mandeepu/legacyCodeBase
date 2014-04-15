@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html ng-app="countryApp">
+<head>
+    <title>Example Angluar js </title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
+    <script>
+        var countryApp = angular.module('countryApp', ['ngRoute']);
+
+        countryApp.config(function($routeProvider) {
+            $routeProvider.
+                when('/', {
+                    template: '<ul><li ng-repeat="country in countries">{{country.name}}</li><ul>',
+                    controller: 'CountryListCtrl'
+
+                }).
+                when('/:countryName', {
+                    template: '<h1>TODO create country detail view</h1>',
+                    controller: 'CountryDetailCtrl'
+                }).
+                otherwise({redirectTo: '/'});
+
+        });
+
+        countryApp.controller('CountryListCtrl', ['$scope', function ($scope) {
+            $scope.countries = [
+                {
+                    "name": "China",
+                    "population": 1359821000,
+                    "flagURL": "http://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+                    "capital": "Beijing",
+                    "gdp": 12261
+                },
+                {
+                    "name": "India",
+                    "population": 1205625000,
+                    "flagURL": "http://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg",
+                    "capital": "New Delhi",
+                    "gdp": 4716
+                },
+                {
+                    "name": "United States of America",
+                    "population": 312247000,
+                    "flagURL": "http://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg",
+                    "capital": "Washington, D.C.",
+                    "gdp": 16244
+                }
+            ];
+        }]);
+
+        countryApp.controller('CountryDetailCtrl', function ($scope, $routeParams) {
+            console.log($routeParams);
+        });
+
+    </script>
+</head>
+<body>
+    <div ng-view></div>
+
+</body>
+</html>
