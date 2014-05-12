@@ -1,0 +1,16 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="../Script/angular.min.js"></script>
+    <script src="../Script/directive.js"></script>
+    <link href="../Style/rating.css" rel="stylesheet" />
+</head>
+<body ng-app="directiveApp" ng-init="rating = 5" ng-controller="fundooCtrl">
+    Rating is  {{rating}} <br />
+    <div fundoo-rating rating-value="rating" max="10" on-rating-selected="saveRatingToServer(newRating)"></div>
+
+    <button type="submit" ng-click="rating = 7">change to 7</button>
+
+</body>
+</html>

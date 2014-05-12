@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.15/angular.min.js"> </script>
+    <script src="../Script/Watch.js "></script>
+</head>
+<body ng-app="watchApp">
+    <form name="watchDemo" ng-controller="TextWatchCtrl">
+        A word:<input type="text" name="input" ng-model="watchtext" />
+        <br />
+        word changed {{counter}} times.
+        <br />
+        Last value of counter was {{lastvalue}}
+        <br />
+        Current value of counter is {{currentvalue}}
+        <br />
+
+        <button ng-click="initCounter()">
+            submit
+        </button>
+
+    </form>
+</body>
+</html>

@@ -66,11 +66,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Demo\CustomDirective.html" />
+    <Content Include="Demo\directiveTemplate.html" />
     <Content Include="Demo\Example.html" />
     <Content Include="Demo\Example2.html" />
     <Content Include="Demo\Example3.html" />
     <Content Include="Demo\greet.js" />
     <Content Include="Demo\Index2.html" />
+    <Content Include="Demo\ratingDirective.html" />
+    <Content Include="Demo\userinfo-template.html" />
+    <Content Include="Demo\Watch.html" />
     <Content Include="js\finance2.js" />
     <Content Include="js\finance3.js" />
     <Content Include="Demo\Greet.html" />
@@ -80,9 +85,13 @@
     <Content Include="js\invoice2.js" />
     <Content Include="js\invoice3.js" />
     <Content Include="Login.html" />
+    <Content Include="Script\angular.min.js" />
     <Content Include="Script\authenticationService.js" />
+    <Content Include="Script\directive.js" />
     <Content Include="Script\loginController.js" />
     <Content Include="Script\logoutController.js" />
+    <Content Include="Script\Watch.js" />
+    <Content Include="Style\rating.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
